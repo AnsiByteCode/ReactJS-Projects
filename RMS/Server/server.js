@@ -52,11 +52,11 @@ http.createServer(app,function (req, res) {
 /////})
 
 ////API security
-// var jwtCheck = jwt({
-//     secret: config.secret
-// });
+ var jwtCheck = jwt({
+     secret: config.secret
+ });
 
-//app.use('/api', jwtCheck);
+app.use('/api', jwtCheck);
 
 //// Image upload
 app.post('/api/imageUpload',function (req, res) {
